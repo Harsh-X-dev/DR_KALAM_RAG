@@ -1,23 +1,28 @@
-
 # 🕊️ Dr. Kalam RAG
 
-> A conversational AI that lets you talk with the wisdom of Dr. A.P.J. Abdul Kalam — powered by Retrieval-Augmented Generation.
+> A REST API that retrieves and generates responses grounded in the wisdom of
+> Dr. A.P.J. Abdul Kalam — ready to power your own chatbot or application.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=flat-square&logo=vercel)](https://dr-kalam-rag.vercel.app)
+[![Live Demo](https://img.shields.io/badge/API-Vercel-black?style=flat-square&logo=vercel)](https://dr-kalam-rag.vercel.app)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Google Gemini](https://img.shields.io/badge/Gemini-4285F4?style=flat-square&logo=google&logoColor=white)
 ![Pinecone](https://img.shields.io/badge/Pinecone-Vector%20DB-brightgreen?style=flat-square)
 
 ## 🔍 What is this?
 
-Dr. Kalam RAG is an AI chatbot built using the RAG (Retrieval-Augmented Generation) architecture. It uses vectorized knowledge from Dr. Kalam's books, speeches, and quotes stored in Pinecone, retrieved at query time, and passed to Google Gemini to generate contextually accurate, in-character responses.
+Dr. Kalam RAG is a production-ready RAG (Retrieval-Augmented Generation) API.
+It uses vectorized knowledge from Dr. Kalam's books, speeches, and quotes stored
+in Pinecone — retrieved at query time and passed to Google Gemini to generate
+contextually accurate, in-character responses.
+
+Integrate it into any frontend or service to build your own Dr. Kalam chatbot.
 
 ## ✨ Features
 
-- 💬 Ask questions and get answers in Dr. Kalam's voice and philosophy
+- 🔌 Clean REST API — drop it into any frontend or service
 - 🧠 RAG pipeline — retrieves relevant context before generating responses
 - ⚡ Fast responses via Gemini API
-- 🌐 Deployed and accessible via Vercel
+- 🌐 Deployed on Vercel
 
 ## 🛠️ Tech Stack
 
@@ -60,9 +65,31 @@ PINECONE_INDEX=your_index_name
 node server.js
 ```
 
-## 🌐 Live Demo
+## 📡 API Usage
+
+```http
+POST /api/ask
+Content-Type: application/json
+
+{
+  "question": "What is your vision for India's youth?"
+}
+```
+
+Response:
+
+```json
+{
+  "answer": "..."
+}
+```
+
+## 🌐 Live API
 
 👉 [dr-kalam-rag.vercel.app](https://dr-kalam-rag.vercel.app)
 
+## 📄 License
 
+MIT
+```
 
