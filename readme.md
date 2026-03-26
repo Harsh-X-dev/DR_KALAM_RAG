@@ -87,9 +87,3 @@ Response:
 ## 🌐 Live API
 
 👉 [dr-kalam-rag.vercel.app](https://dr-kalam-rag.vercel.app)
-
-## 📄 License
-
-MIT
-```
-
