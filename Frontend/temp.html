@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR KALAM RAG Chat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans h-screen flex overflow-hidden">
+
+    <aside class="w-72 bg-white border-r border-gray-200 flex flex-col flex-shrink-0">
+        <div class="p-6 flex items-center space-x-3">
+            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl overflow-hidden">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-gray-900 text-lg leading-tight">DR KALAM</h1>
+                <h2 class="font-bold text-blue-600 text-lg leading-tight">RAG Cha</h2>
+                <p class="text-xs text-gray-500 mt-1">Your AI Companion for<br>Dr. A. P. J. Abdul Kalam's<br>Wisdom</p>
+            </div>
+        </div>
+
+        <div class="px-4 flex-1">
+            <button class="w-full flex items-center space-x-3 bg-blue-50 text-blue-700 px-4 py-3 rounded-xl font-medium mb-4">
+                <i class="fa-regular fa-comment-dots"></i>
+                <span>New Chat</span>
+            </button>
+
+            <nav class="space-y-1">
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl font-medium">
+                    <i class="fa-solid fa-database text-gray-400"></i>
+                    <span>Knowledge Base</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl font-medium">
+                    <i class="fa-regular fa-star text-gray-400"></i>
+                    <span>Favorites</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl font-medium">
+                    <i class="fa-regular fa-clock text-gray-400"></i>
+                    <span>History</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl font-medium">
+                    <i class="fa-regular fa-user text-gray-400"></i>
+                    <span>About Dr. Kalam</span>
+                </a>
+                <a href="#" class="flex items-center space-x-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl font-medium">
+                    <i class="fa-solid fa-gear text-gray-400"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+        </div>
+
+        <div class="p-4 space-y-4">
+            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <i class="fa-solid fa-quote-left text-blue-500 text-xl mb-2"></i>
+                <p class="text-sm text-gray-600 leading-relaxed">Dream, dream, dream.<br>Dreams transform into thoughts and thoughts result in action.</p>
+                <p class="text-xs text-gray-400 mt-2 text-right">– A. P. J. Abdul Kalam</p>
+            </div>
+            
+            <div class="flex items-center justify-between px-4 py-2">
+                <div class="flex items-center space-x-2 text-sm text-gray-600">
+                    <i class="fa-regular fa-sun"></i>
+                    <span>Light</span>
+                </div>
+                <div class="w-10 h-6 bg-blue-100 rounded-full relative cursor-pointer">
+                    <div class="w-4 h-4 bg-blue-500 rounded-full absolute left-1 top-1"></div>
+                </div>
+                <i class="fa-regular fa-moon text-gray-400 text-sm"></i>
+            </div>
+        </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col min-w-0 bg-white">
+        <header class="h-16 border-b border-gray-200 flex items-center justify-between px-8 bg-white flex-shrink-0">
+            <div>
+                <h2 class="text-xl font-bold text-gray-900">DR KALAM <span class="text-blue-600">RAG Cha</span></h2>
+                <p class="text-sm text-gray-500">Ask, Learn and be Inspired.</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="flex items-center space-x-2 text-sm text-gray-600 border border-gray-300 px-4 py-2 rounded-lg hover:bg-gray-50">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Star this project</span>
+                </button>
+                <div class="w-10 h-10 bg-blue-600 rounded-full text-white flex items-center justify-center relative cursor-pointer">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="absolute -bottom-1 -right-1 bg-white rounded-full p-0.5">
+                        <i class="fa-solid fa-chevron-down text-xs text-gray-600"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-8">
+            <div class="max-w-4xl mx-auto space-y-8">
+                
+                <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 relative overflow-hidden flex items-center justify-between border border-blue-100">
+                    <div class="z-10 max-w-md">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-2">Hello! 👋</h2>
+                        <p class="text-gray-700 text-lg mb-4">I'm <span class="font-bold">DR KALAM RAG Cha</span>, your AI assistant.</p>
+                        <p class="text-gray-600">Ask me anything about Dr. A. P. J. Abdul Kalam's life, teachings, quotes, books and ideas.</p>
+                    </div>
+                    <div class="w-64 h-48 bg-blue-200 rounded-lg opacity-50 flex items-center justify-center z-0">
+                        <span class="text-blue-500 text-sm">Portrait Illustration</span>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-center text-sm text-gray-500 mb-4">Try asking me:</p>
+                    <div class="grid grid-cols-3 gap-4">
+                        <button class="bg-white border border-gray-200 rounded-xl p-4 flex items-start space-x-3 text-left hover:border-blue-300 hover:shadow-sm transition">
+                            <i class="fa-regular fa-lightbulb text-blue-500 mt-1"></i>
+                            <span class="text-sm text-gray-700 flex-1">What were Dr. Kalam's views on education?</span>
+                            <i class="fa-solid fa-chevron-right text-gray-400 mt-1"></i>
+                        </button>
+                        <button class="bg-white border border-gray-200 rounded-xl p-4 flex items-start space-x-3 text-left hover:border-blue-300 hover:shadow-sm transition">
+                            <i class="fa-solid fa-book-open text-blue-500 mt-1"></i>
+                            <span class="text-sm text-gray-700 flex-1">Tell me about Dr. Kalam's life journey.</span>
+                            <i class="fa-solid fa-chevron-right text-gray-400 mt-1"></i>
+                        </button>
+                        <button class="bg-white border border-gray-200 rounded-xl p-4 flex items-start space-x-3 text-left hover:border-blue-300 hover:shadow-sm transition">
+                            <i class="fa-solid fa-quote-left text-blue-500 mt-1"></i>
+                            <span class="text-sm text-gray-700 flex-1">Share an inspiring quote by Dr. Kalam.</span>
+                            <i class="fa-solid fa-chevron-right text-gray-400 mt-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center my-6">
+                    <span class="bg-gray-100 text-gray-500 text-xs px-4 py-1 rounded-full">Today</span>
+                </div>
+
+                <div class="space-y-6 flex flex-col">
+                    <div class="bg-blue-600 text-white p-4 rounded-2xl rounded-tr-sm self-end max-w-xl shadow-sm">
+                        <p>What did Dr. Kalam say about dreams?</p>
+                        <p class="text-xs text-blue-200 text-right mt-1">10:30 AM <i class="fa-solid fa-check-double ml-1"></i></p>
+                    </div>
+
+                    <div class="flex space-x-4 max-w-3xl">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-blue-600 overflow-hidden border border-gray-200">
+                             <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="bg-white border border-gray-200 p-5 rounded-2xl rounded-tl-sm shadow-sm flex-1">
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Dr. Kalam believed that "Dreams are not what you see in sleep, dreams are those that do not let you sleep." He emphasized that dreams have the power to transform into thoughts and actions that can change the world.
+                            </p>
+                            
+                            <div>
+                                <p class="text-xs font-semibold text-gray-500 mb-2">Sources</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">Wings of Fire (Autobiography)</span>
+                                    <span class="text-xs text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">Ignited Minds</span>
+                                    <span class="text-xs text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">My Journey</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-gray-400 text-right mt-2">10:31 AM</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="p-6 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto relative">
+                <div class="border border-gray-300 rounded-2xl bg-white shadow-sm flex flex-col p-2 focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 transition">
+                    <textarea rows="2" class="w-full resize-none outline-none p-3 text-gray-700 bg-transparent placeholder-gray-400" placeholder="Ask anything about Dr. A. P. J. Abdul Kalam..."></textarea>
+                    <div class="flex items-center justify-between px-2 pb-1">
+                        <div class="flex space-x-3 text-gray-400">
+                            <button class="hover:text-gray-600"><i class="fa-solid fa-paperclip"></i></button>
+                            <button class="hover:text-gray-600"><i class="fa-solid fa-book"></i></button>
+                        </div>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition shadow-sm">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-center text-xs text-gray-400 mt-3">DR KALAM RAG Cha can make mistakes. Please verify important information.</p>
+            </div>
+        </div>
+    </main>
+
+    <aside class="w-80 bg-gray-50 border-l border-gray-200 p-6 space-y-6 overflow-y-auto hidden lg:block flex-shrink-0">
+        
+        <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="font-bold text-sm text-gray-900">About DR KALAM RAG Cha</h3>
+                <i class="fa-solid fa-circle-info text-blue-500"></i>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                This AI assistant uses Retrieval Augmented Generation (RAG) to provide accurate and contextual answers from authentic resources about Dr. A. P. J. Abdul Kalam.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+            <div class="flex items-center space-x-2 mb-4">
+                <i class="fa-solid fa-database text-blue-500"></i>
+                <h3 class="font-bold text-sm text-gray-900">Knowledge Base</h3>
+            </div>
+            <div class="mb-4">
+                <span class="text-3xl font-bold text-blue-600">120+</span>
+                <p class="text-sm text-blue-600/80">Documents</p>
+            </div>
+            <ul class="space-y-3 text-sm text-gray-600">
+                <li class="flex justify-between items-center">
+                    <span class="flex items-center space-x-2"><i class="fa-solid fa-book w-4 text-gray-400"></i> <span>Books</span></span>
+                    <span class="text-gray-900 font-medium">35+</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span class="flex items-center space-x-2"><i class="fa-solid fa-bullhorn w-4 text-gray-400"></i> <span>Speeches</span></span>
+                    <span class="text-gray-900 font-medium">45+</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span class="flex items-center space-x-2"><i class="fa-regular fa-newspaper w-4 text-gray-400"></i> <span>Articles</span></span>
+                    <span class="text-gray-900 font-medium">25+</span>
+                </li>
+                <li class="flex justify-between items-center">
+                    <span class="flex items-center space-x-2"><i class="fa-regular fa-comments w-4 text-gray-400"></i> <span>Interviews</span></span>
+                    <span class="text-gray-900 font-medium">15+</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="text-orange-500">🔥</span>
+                <h3 class="font-bold text-sm text-gray-900">Popular Topics</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-blue-600 border border-blue-100 bg-blue-50 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">Education</span>
+                <span class="text-xs text-blue-600 border border-blue-100 bg-blue-50 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">Dreams</span>
+                <span class="text-xs text-blue-600 border border-blue-100 bg-blue-50 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">Leadership</span>
+                <span class="text-xs text-blue-600 border border-blue-100 bg-blue-50 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">Youth</span>
+                <span class="text-xs text-blue-600 border border-blue-100 bg-blue-50 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">Innovation</span>
+                <span class="text-xs text-blue-600 border border-blue-100 bg-blue-50 px-3 py-1.5 rounded-lg cursor-pointer hover:bg-blue-100">India 2020</span>
+            </div>
+            <button class="mt-4 text-xs text-blue-600 hover:text-blue-700 flex items-center space-x-1 font-medium">
+                <span>View all topics</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+    </aside>
+
+</body>
+</html>
