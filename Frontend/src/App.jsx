@@ -1,15 +1,16 @@
-// import { useState } from "react";
-// import {Landing} from './pages/Landing.jsx'
-import { Auth } from './pages/auth.jsx';
-import {Dashboard} from './pages/Dashboard.jsx'
+import Router from "./routes/router.jsx";
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
+import { AuthProvider } from "./features/auth/authContext.jsx";
+import { Toaster } from "sonner";
 
 function App() {
-  return(
-    // <Landing/>
-    // <Auth/>
-    <Dashboard/>
-  ) 
+  return (
+    <AuthProvider>
+      <Toaster richColors position="top-right" />
+      <RouterProvider router={Router} />
+    </AuthProvider>
+  );
 }
 
 export default App;
