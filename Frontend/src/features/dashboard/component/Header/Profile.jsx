@@ -7,11 +7,13 @@ export default function Profile() {
   return (
     // The 'group' class on this relative container allows us to trigger 
     // the dropdown visibility when hovering anywhere over this wrapper.
+    <div className ="flex items-center gap-3" > 
+  <p className="text-md font-medium text-slate-700">Welcome, {user?.name}</p>
     <div className="relative group inline-block">
-      
+    
       {/* Profile Icon (The Trigger) */}
       <button className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-        <User size={20} strokeWidth={2.5} />
+        { user?.name?.[0]?.toUpperCase() || <User size={16} />}
       </button>
 
       {/* Dropdown Modal */}
@@ -31,7 +33,7 @@ export default function Profile() {
           <button 
             className="w-full flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 rounded-lg hover:bg-rose-50 hover:text-rose-600 transition-colors text-left"
             onClick={() => handleLogout()}
-          >
+            >
             <LogOut size={16} />
             <span>Logout</span>
           </button>
@@ -43,5 +45,6 @@ export default function Profile() {
       </div>
       
     </div>
+            </div>
   );
 }

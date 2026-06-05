@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <header className="h-[72px] bg-white/80 backdrop-blur-md border-b border-gray-200 flex items-center justify-between px-8 sticky top-0 z-10">
       <div className="flex flex-col">
-        <h1 className="text-lg font-bold text-[#0f172a]">{data[path]}</h1>
+        <h1 className="text-lg font-medium text-[#0f172a]">{data[path]}</h1>
       </div>
       <Profile />
     </header>

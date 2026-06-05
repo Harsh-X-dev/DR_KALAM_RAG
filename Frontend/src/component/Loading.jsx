@@ -1,9 +1,14 @@
 import { SyncLoader } from "react-spinners";
-export const Loading = () => {
+export const Loading = ({ fullScreen , size}) => {
   return (
-    <div className="flex w-full justify-center mt-20">
-  <SyncLoader color="#0f4ed4" size={10} />
-</div>
-
-  )
-}
+    <div
+      className={
+        fullScreen
+          ? "flex h-screen w-full items-center justify-center"
+          : "flex items-center justify-center"
+      }
+    >
+      <SyncLoader color="#0f4ed4" size={size} />
+    </div>
+  );
+};

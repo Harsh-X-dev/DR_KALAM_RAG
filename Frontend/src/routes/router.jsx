@@ -20,18 +20,14 @@ const Router = createBrowserRouter(
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      <Route
-        element={
-          <Protected>
-            <Dashboard />
-          </Protected>
-        }
-      >
-        <Route path="chat" element={<ChatBox />}>
-          <Route path=":chatId" element={<Chat />} />
+      <Route element={<Protected />}>
+        <Route element={<Dashboard />}>
+          <Route path="chat" element={<ChatBox />}>
+            <Route path=":chatId" element={<Chat />} />
+          </Route>
+          <Route path="about" element={<About />} />
+          <Route path="knowledge-base" element={<KnowledgeBase />} />
         </Route>
-        <Route path="about" element={<About />} />
-        <Route path="knowledge-base" element={<KnowledgeBase />} />
       </Route>
     </>,
   ),
