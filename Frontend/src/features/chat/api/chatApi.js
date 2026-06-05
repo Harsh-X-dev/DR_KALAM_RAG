@@ -1,8 +1,8 @@
 import {apiClient} from "../../../api/apiClient.js";
-
+const BASE_API_URL = import.meta.env.VITE_Backend_URL;
 export const sendMessage = async (message, id) => {
   try {
-    const response = await fetch("http://localhost:3000/api/chat", {
+    const response = await fetch(`${BASE_API_URL}/chat`, {
       method: "POST",
       credentials: "include",
       headers: {
