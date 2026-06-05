@@ -181,7 +181,7 @@ export const Register = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, password: e.target.value })
                     }
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     placeholder="Create a password"
                     className="w-full px-4 py-2.5 rounded-xl border border-[var(--color-input-border)] bg-[var(--color-input-bg)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-input-ring)] focus:border-[var(--color-accent)] transition-all text-sm placeholder:text-[var(--color-text-muted)]"
                   />
