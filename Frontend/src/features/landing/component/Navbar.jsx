@@ -19,7 +19,7 @@ export const Navbar = () => {
           <span className="text-xs font-bold text-[#0d1b2a] tracking-wide">
             DR KALAM
           </span>
-          <span className="text-lg font-bold text-[#1a56db]">RAG Chat</span>
+          <span className="text-lg font-bold text-[var(--color-accent)]">RAG Chat</span>
         </div>
       </div>
 
@@ -27,19 +27,19 @@ export const Navbar = () => {
       <nav className="hidden md:flex items-center gap-8 text-[14px] font-semibold text-[#334155]">
         <a
           href="#home"
-          className="text-[#1a56db] border-b-2 border-[#1a56db] pb-1 hover:opacity-80 transition-opacity"
+          className="text-[var(--color-accent)] border-b-2 border-[var(--color-accent)] pb-1 hover:opacity-80 transition-opacity"
         >
           Home
         </a>
         <a
           href="#features"
-          className="hover:text-[#1a56db] transition-colors pb-1"
+          className="hover:text-[var(--color-accent)] transition-colors pb-1"
         >
           Features
         </a>
         <a
           href="#knowledge"
-          className="hover:text-[#1a56db] transition-colors pb-1"
+          className="hover:text-[var(--color-accent)] transition-colors pb-1"
         >
           Knowledge
         </a>

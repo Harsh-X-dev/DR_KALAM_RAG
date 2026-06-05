@@ -52,15 +52,15 @@ export const Feature = () => {
               className="bg-white rounded-2xl p-7 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-start transition-all duration-200 hover:shadow-md"
             >
               {/* Icon Container */}
-              <div className="w-12 h-12 rounded-xl bg-[#eff4ff] text-[#1a56db] flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5">
                 {card.icon}
               </div>
               
               {/* Content */}
-              <h3 className="text-base font-bold text-[#0f172a] mb-1.5">
+              <h3 className="text-base font-bold text-[var(--color-text-primary)] mb-1.5">
                 {card.title}
               </h3>
-              <span className="text-lg font-bold text-[#1a56db] mb-4">
+              <span className="text-lg font-bold text-[var(--color-accent)] mb-4">
                 {card.stat}
               </span>
               <p className="text-xs text-[#64748b] leading-relaxed max-w-[200px]">
@@ -71,15 +71,15 @@ export const Feature = () => {
         </div>
 
         {/* Quote Banner Section */}
-        <div className="max-w-5xl mx-auto bg-[#eff4ff]/60 rounded-2xl p-8 md:p-10 relative flex items-start gap-4">
+        <div className="max-w-5xl mx-auto bg-teal-50/60 rounded-2xl p-8 md:p-10 relative flex items-start gap-4">
           {/* Stylized Quote Mark */}
-          <span className="text-5xl font-serif font-bold text-[#1a56db]/30 select-none leading-none mt-1">
+          <span className="text-5xl font-serif font-bold text-teal-600/30 select-none leading-none mt-1">
             “
           </span>
           
           {/* Quote Text & Author */}
           <div className="flex-1 flex flex-col items-center text-center pr-6">
-            <p className="text-[#1e3a8a] font-semibold text-lg md:text-xl leading-relaxed max-w-3xl mb-4">
+            <p className="text-teal-900 dark:text-teal-100 font-semibold text-lg md:text-xl leading-relaxed max-w-3xl mb-4">
               Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.
             </p>
             <span className="text-xs font-medium text-[#475569] tracking-wide">

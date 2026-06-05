@@ -21,13 +21,13 @@ export default function KnowledgeBaseCard({
   
   // 1. Dynamic Theme Configuration
   const themeConfig = {
-    blue: { bg: 'bg-blue-50', text: 'text-blue-600', icon: 'text-blue-500' },
+    blue:   { bg: 'bg-teal-50 dark:bg-teal-900/30',   text: 'text-teal-600 dark:text-teal-400', icon: 'text-teal-500 dark:text-teal-400' },
     purple: { bg: 'bg-purple-50', text: 'text-purple-600', icon: 'text-purple-500' },
     green: { bg: 'bg-emerald-50', text: 'text-emerald-600', icon: 'text-emerald-500' },
     orange: { bg: 'bg-orange-50', text: 'text-orange-600', icon: 'text-orange-500' },
     red: { bg: 'bg-rose-50', text: 'text-rose-600', icon: 'text-rose-500' },
     teal: { bg: 'bg-teal-50', text: 'text-teal-600', icon: 'text-teal-500' },
-  }[theme] || { bg: 'bg-slate-50', text: 'text-slate-600', icon: 'text-slate-500' };
+  }[theme] || { bg: 'bg-slate-100 dark:bg-slate-800', text: 'text-slate-600 dark:text-slate-300', icon: 'text-slate-500 dark:text-slate-400' };
 
   // 2. Dynamic Main Icon Selection
   const renderMainIcon = () => {
@@ -42,7 +42,7 @@ export default function KnowledgeBaseCard({
   };
 
   return (
-    <div className="flex flex-col p-6 border border-slate-100 rounded-2xl bg-white shadow-sm hover:shadow-md transition-all duration-200 h-full w-full max-w-sm">
+    <div className="flex flex-col p-6 border border-[var(--color-border-subtle)] rounded-2xl bg-[var(--color-surface-card)] shadow-sm hover:shadow-md transition-all duration-200 h-full w-full max-w-sm">
       
       {/* Top Section: Icon, Title, and Badge */}
       <div className="flex gap-4 mb-5">
@@ -53,7 +53,7 @@ export default function KnowledgeBaseCard({
 
         {/* Title & Badge */}
         <div className="flex flex-col items-start pt-1">
-          <h3 className="text-sm font-bold text-slate-900 leading-tight mb-2 line-clamp-2">
+          <h3 className="text-sm font-bold text-[var(--color-text-primary)] leading-tight mb-2 line-clamp-2">
             {title}
           </h3>
           <span className={`text-[10px] font-semibold px-2.5 py-0.5 rounded-full ${themeConfig.bg} ${themeConfig.text}`}>
@@ -63,26 +63,26 @@ export default function KnowledgeBaseCard({
       </div>
 
       {/* Middle Section: Description */}
-      <p className="text-xs text-slate-500 leading-relaxed mb-8 flex-grow line-clamp-3">
+      <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-8 flex-grow line-clamp-3">
         {description}
       </p>
 
       {/* Bottom Section: Metadata */}
       <div className="flex items-center gap-6 mt-auto pt-2">
         {/* Year */}
-        <div className="flex items-center text-slate-400 gap-1.5">
+        <div className="flex items-center text-[var(--color-text-muted)] gap-1.5">
           <Calendar size={14} />
-          <span className="text-xs font-medium text-slate-500">{year}</span>
+          <span className="text-xs font-medium text-[var(--color-text-muted)]">{year}</span>
         </div>
 
         {/* Duration / Pages / Status */}
-        <div className="flex items-center text-slate-400 gap-1.5">
+        <div className="flex items-center text-[var(--color-text-muted)] gap-1.5">
           {metaIconType === 'clock' ? (
             <Clock size={14} />
           ) : (
             <FileText size={14} />
           )}
-          <span className="text-xs font-medium text-slate-500">{metaText}</span>
+          <span className="text-xs font-medium text-[var(--color-text-muted)]">{metaText}</span>
         </div>
       </div>
 

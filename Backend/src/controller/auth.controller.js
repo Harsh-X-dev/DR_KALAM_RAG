@@ -10,9 +10,8 @@ const genrateToken = (user_id) => {
 
 export const loginController = async (req, res) => {
   try {
-
     const { email, password } = req.body;
-    
+
     // check if fileds are present
     if (!email || !password) {
       return res.status(400).json({ message: "All fields are required" });
@@ -42,7 +41,7 @@ export const loginController = async (req, res) => {
     res.cookie("token", token);
     res.status(200).json({
       message: "Login successful",
-      data: {
+      user: {
         name: user.name,
         email: user.email,
       },
@@ -102,7 +101,7 @@ export const registerController = async (req, res) => {
     res.cookie("token", token);
     res.status(201).json({
       message: "User created successfully.",
-      data: userWithoutPassword,
+      user: userWithoutPassword,
     });
   } catch (err) {
     console.error(err);
@@ -125,7 +124,7 @@ export const getUserController = async (req, res) => {
 
     res
       .status(200)
-      .json({ message: "User details fetched successfully", data: user });
+      .json({ message: "User details fetched successfully", user });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Something went wrong" });

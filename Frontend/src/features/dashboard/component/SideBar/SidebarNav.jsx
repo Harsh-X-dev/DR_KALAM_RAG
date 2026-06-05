@@ -11,8 +11,8 @@ export const SidebarNav = () => {
   const getNavStyle = ({ isActive }) =>
     `w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-colors text-sm ${
       isActive
-        ? "bg-[#eff4ff] text-[#1a56db]" // Active state (Blue)
-        : "text-[#475569] hover:bg-gray-50" // Inactive state (Gray)
+        ? "bg-[var(--color-accent-subtle)] text-[var(--color-accent)]" // Active — Teal
+        : "text-[var(--color-text-secondary)] hover:bg-[var(--color-surface-raised)]" // Inactive
     }`;
 
   return (

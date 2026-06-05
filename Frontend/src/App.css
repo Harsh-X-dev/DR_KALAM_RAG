@@ -1,1 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────
+Enable CLASS-BASED dark mode for Tailwind v4.
+Without this, dark: classes only respond to OS preference.
+───────────────────────────────────────────────────────────────── */
+
+@variant dark (&:where(.dark, .dark *));
+/* ─────────────────────────────────────────────────────────────────
+   LIGHT THEME  (default / :root)
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  /* Surfaces */
+  --color-surface:          #ffffff;
+  --color-surface-raised:   #f8fafc;
+  --color-surface-card:     #ffffff;
+
+  /* Borders */
+  --color-border:           #e2e8f0;
+  --color-border-subtle:    #f1f5f9;
+
+  /* Text */
+  --color-text-primary:     #0f172a;
+  --color-text-secondary:   #475569;
+  --color-text-muted:       #94a3b8;
+
+  /* Accent — Teal 600 */
+  --color-accent:           #0d9488;
+  --color-accent-hover:     #0f766e;
+  --color-accent-subtle:    #ccfbf1;
+  --color-accent-text:      #134e4a;
+
+  /* Inputs */
+  --color-input-bg:         #ffffff;
+  --color-input-border:     #e2e8f0;
+  --color-input-ring:       rgba(13, 148, 136, 0.25);
+
+  /* Focus ring */
+  --color-focus-ring:       rgba(13, 148, 136, 0.30);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   DARK THEME  (.dark on <html>)
+   ───────────────────────────────────────────────────────────────── */
+.dark {
+  /* Surfaces */
+  --color-surface:          #0f172a;
+  --color-surface-raised:   #1e293b;
+  --color-surface-card:     #1e293b;
+
+  /* Borders */
+  --color-border:           #334155;
+  --color-border-subtle:    #1e293b;
+
+  /* Text */
+  --color-text-primary:     #f1f5f9;
+  --color-text-secondary:   #94a3b8;
+  --color-text-muted:       #64748b;
+
+  /* Accent — Cyan/Teal 400 (brighter for dark contexts) */
+  --color-accent:           #2dd4bf;
+  --color-accent-hover:     #5eead4;
+  --color-accent-subtle:    #134e4a;
+  --color-accent-text:      #ccfbf1;
+
+  /* Inputs */
+  --color-input-bg:         #1e293b;
+  --color-input-border:     #334155;
+  --color-input-ring:       rgba(45, 212, 191, 0.25);
+
+  /* Focus ring */
+  --color-focus-ring:       rgba(45, 212, 191, 0.30);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   BASE STYLES
+   ───────────────────────────────────────────────────────────────── */
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}

@@ -54,8 +54,8 @@ export const Register = () => {
           <div className="space-y-6 lg:space-y-8 flex flex-col items-center lg:items-start">
             {/* Feature 1 */}
             <div className="flex items-start gap-4 text-left max-w-sm lg:max-w-none">
-              <div className="w-12 h-12 rounded-full bg-[#eff4ff] border border-blue-100 flex items-center justify-center shrink-0">
-                <UserPlus className="w-6 h-6 text-[#1a56db]" />
+              <div className="w-12 h-12 rounded-full bg-teal-50 dark:bg-teal-900/30 border border-teal-100 dark:border-teal-800 flex items-center justify-center shrink-0">
+                <UserPlus className="w-6 h-6 text-teal-600 dark:text-teal-400" />
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-1">Create Your Account</h3>
@@ -67,8 +67,8 @@ export const Register = () => {
 
             {/* Feature 2 */}
             <div className="flex items-start gap-4 text-left max-w-sm lg:max-w-none">
-              <div className="w-12 h-12 rounded-full bg-[#eff4ff] border border-blue-100 flex items-center justify-center shrink-0">
-                <Bookmark className="w-6 h-6 text-[#1a56db]" />
+              <div className="w-12 h-12 rounded-full bg-teal-50 dark:bg-teal-900/30 border border-teal-100 dark:border-teal-800 flex items-center justify-center shrink-0">
+                <Bookmark className="w-6 h-6 text-teal-600 dark:text-teal-400" />
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-1">
@@ -82,8 +82,8 @@ export const Register = () => {
 
             {/* Feature 3 */}
             <div className="flex items-start gap-4 text-left max-w-sm lg:max-w-none">
-              <div className="w-12 h-12 rounded-full bg-[#eff4ff] border border-blue-100 flex items-center justify-center shrink-0">
-                <BookOpen className="w-6 h-6 text-[#1a56db]" />
+              <div className="w-12 h-12 rounded-full bg-teal-50 dark:bg-teal-900/30 border border-teal-100 dark:border-teal-800 flex items-center justify-center shrink-0">
+                <BookOpen className="w-6 h-6 text-teal-600 dark:text-teal-400" />
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-1">Learn & Grow</h3>
@@ -97,11 +97,11 @@ export const Register = () => {
 
         {/* RIGHT COLUMN: Register Card */}
         <div className="flex-1 flex justify-center lg:justify-end items-center">
-          <div className="bg-white rounded-[2rem] p-8 sm:p-10 w-full max-w-md shadow-2xl">
+          <div className="bg-[var(--color-surface-card)] rounded-[2rem] p-8 sm:p-10 w-full max-w-md shadow-2xl">
             {/* Header / Logo */}
             <div className="flex flex-col items-center mb-8">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 overflow-hidden rounded-full border border-gray-200 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 overflow-hidden rounded-full border border-[var(--color-border)] flex items-center justify-center shrink-0">
                   <img
                     src={logo}
                     alt="Logo Placeholder"
@@ -109,18 +109,18 @@ export const Register = () => {
                   />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-[11px] font-bold tracking-wider text-[#0f172a]">
+                  <span className="text-[11px] font-bold tracking-wider text-[var(--color-text-primary)]">
                     DR KALAM
                   </span>
-                  <span className="text-base font-bold text-[#1a56db]">
+                  <span className="text-base font-bold text-[var(--color-accent)]">
                     RAG Chat
                   </span>
                 </div>
               </div>
-              <h2 className="text-[22px] font-bold text-[#0f172a] mb-1">
+              <h2 className="text-[22px] font-bold text-[var(--color-text-primary)] mb-1">
                 Create Your Account
               </h2>
-              <p className="text-[#64748b] text-sm">
+              <p className="text-[var(--color-text-muted)] text-sm">
                 Start your journey with Dr. Kalam's wisdom.
               </p>
             </div>
@@ -135,7 +135,7 @@ export const Register = () => {
             >
               {/* Full Name */}
               <div>
-                <label className="block text-sm font-bold text-[#0f172a] mb-1.5">
+                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-1.5">
                   Full Name
                 </label>
                 <div className="relative">
@@ -146,9 +146,9 @@ export const Register = () => {
                     }
                     type="text"
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm placeholder-gray-400"
+                    className="w-full px-4 py-2.5 rounded-xl border border-[var(--color-input-border)] bg-[var(--color-input-bg)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-input-ring)] focus:border-[var(--color-accent)] transition-all text-sm placeholder:text-[var(--color-text-muted)]"
                   />
-                  <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400">
+                  <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)]">
                     <User className="w-4 h-4" />
                   </span>
                 </div>
@@ -156,7 +156,7 @@ export const Register = () => {
 
               {/* Email Address */}
               <div>
-                <label className="block text-sm font-bold text-[#0f172a] mb-1.5">
+                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-1.5">
                   Email Address
                 </label>
                 <input
@@ -166,13 +166,13 @@ export const Register = () => {
                   }
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm placeholder-gray-400"
+                  className="w-full px-4 py-2.5 rounded-xl border border-[var(--color-input-border)] bg-[var(--color-input-bg)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-input-ring)] focus:border-[var(--color-accent)] transition-all text-sm placeholder:text-[var(--color-text-muted)]"
                 />
               </div>
 
               {/* Password */}
               <div>
-                <label className="block text-sm font-bold text-[#0f172a] mb-1.5">
+                <label className="block text-sm font-bold text-[var(--color-text-primary)] mb-1.5">
                   Password
                 </label>
                 <div className="relative">
@@ -183,11 +183,11 @@ export const Register = () => {
                     }
                     type="password"
                     placeholder="Create a password"
-                    className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm placeholder-gray-400"
+                    className="w-full px-4 py-2.5 rounded-xl border border-[var(--color-input-border)] bg-[var(--color-input-bg)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-input-ring)] focus:border-[var(--color-accent)] transition-all text-sm placeholder:text-[var(--color-text-muted)]"
                   />
                   <button
                     type="button"
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)] transition-colors"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     <Eye className="w-4 h-4" />
@@ -208,7 +208,7 @@ export const Register = () => {
               {/* Register Button */}
               <button
                 type="submit"
-                className="w-full bg-[#0f4ed4] hover:bg-[#1a56db] text-white font-medium py-3.5 rounded-xl transition-colors mt-2 shadow-sm"
+                className="w-full bg-[var(--color-accent-hover)] hover:bg-[var(--color-accent)] text-white font-medium py-3.5 rounded-xl transition-colors mt-2 shadow-sm"
               >
                 Register
               </button>
@@ -216,12 +216,12 @@ export const Register = () => {
 
             {/* Footer */}
             <div className="mt-8 text-center text-sm">
-              <span className="text-[#0f172a] font-medium">
+              <span className="text-[var(--color-text-primary)] font-medium">
                 Already have an account?{" "}
               </span>
               <Link
                 to="/login"
-                className="text-[#1a56db] font-bold hover:underline"
+                className="text-[var(--color-accent)] font-bold hover:underline"
               >
                 Login
               </Link>

@@ -11,7 +11,7 @@ export const Login = () => {
   const { handleLogin, user, loading } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   if (loading) {
-    return <Loading fullScreen={false} size={15} />;
+    return <Loading fullScreen={true} size={15} />;
   }
 
   if (user) {
@@ -89,11 +89,11 @@ export const Login = () => {
 
         {/* RIGHT COLUMN: Login Card (Appears at top on mobile, right on desktop) */}
         <div className="flex-1 flex justify-center lg:justify-end">
-          <div className="bg-white rounded-[2rem] p-8 sm:p-10 w-full max-w-md shadow-2xl">
+          <div className="bg-[var(--color-surface-card)] rounded-[2rem] p-8 sm:p-10 w-full max-w-md shadow-2xl">
             {/* Header / Logo */}
             <div className="flex flex-col items-center mb-8">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 overflow-hidden rounded-full border border-gray-200 flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 overflow-hidden rounded-full border border-[var(--color-border)] flex items-center justify-center shrink-0">
                   <img
                     src={logo}
                     alt="Logo"
@@ -101,18 +101,18 @@ export const Login = () => {
                   />
                 </div>
                 <div className="flex flex-col leading-tight">
-                  <span className="text-[11px] font-bold tracking-wider text-[#0b1b42]">
+                  <span className="text-[11px] font-bold tracking-wider text-[var(--color-text-primary)]">
                     DR KALAM
                   </span>
-                  <span className="text-base font-bold text-[#1a56db]">
+                  <span className="text-base font-bold text-[var(--color-accent)]">
                     RAG Chat
                   </span>
                 </div>
               </div>
-              <h2 className="text-2xl font-bold text-[#0b1b42] mb-2">
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">
                 Welcome Back! 👋
               </h2>
-              <p className="text-[#64748b] text-sm">
+              <p className="text-[var(--color-text-muted)] text-sm">
                 Login to continue your journey.
               </p>
             </div>
@@ -127,7 +127,7 @@ export const Login = () => {
             >
               {/* Email */}
               <div>
-                <label className="block text-sm font-semibold text-[#334155] mb-2">
+                <label className="block text-sm font-semibold text-[var(--color-text-secondary)] mb-2">
                   Email Address
                 </label>
                 <input
@@ -135,13 +135,13 @@ export const Login = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm placeholder-gray-400"
+                  className="w-full px-4 py-3 rounded-xl border border-[var(--color-input-border)] bg-[var(--color-input-bg)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-input-ring)] focus:border-[var(--color-accent)] transition-all text-sm placeholder:text-[var(--color-text-muted)]"
                 />
               </div>
 
               {/* Password */}
               <div>
-                <label className="block text-sm font-semibold text-[#334155] mb-2">
+                <label className="block text-sm font-semibold text-[var(--color-text-secondary)] mb-2">
                   Password
                 </label>
                 <div className="relative">
@@ -150,11 +150,11 @@ export const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     type={showPassword ? "text" : "password"}
                     placeholder="Enter your password"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm placeholder-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-[var(--color-input-border)] bg-[var(--color-input-bg)] text-[var(--color-text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--color-input-ring)] focus:border-[var(--color-accent)] transition-all text-sm placeholder:text-[var(--color-text-muted)]"
                   />
                   <button
                     type="button"
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)] transition-colors"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     <Eye className="w-5 h-5" />
@@ -184,7 +184,7 @@ export const Login = () => {
               {/* Login Button */}
               <button
                 type="submit"
-                className="w-full bg-[#0f4ed4] hover:bg-[#1a56db] text-white font-medium py-3.5 rounded-xl transition-colors mt-2 shadow-sm"
+                className="w-full bg-[var(--color-accent-hover)] hover:bg-[var(--color-accent)] text-white font-medium py-3.5 rounded-xl transition-colors mt-2 shadow-sm"
               >
                 Login
               </button>
@@ -195,10 +195,10 @@ export const Login = () => {
 
             {/* Footer */}
             <div className="mt-8 text-center text-sm">
-              <span className="text-[#64748b]">Don't have an account? </span>
+              <span className="text-[var(--color-text-muted)]">Don't have an account? </span>
               <Link
                 to="/register"
-                className="text-[#1a56db] font-semibold hover:underline"
+                className="text-[var(--color-accent)] font-semibold hover:underline"
               >
                 Register
               </Link>

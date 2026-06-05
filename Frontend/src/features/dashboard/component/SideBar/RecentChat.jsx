@@ -10,7 +10,7 @@ export const RecentChats = ({ chats = [] }) => {
       {/* Section Header */}
       {chats.length > 0 && (
         <div className="mb-2 px-3 pt-2">
-          <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+          <h3 className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider">
             Recent
           </h3>
         </div>
@@ -21,12 +21,12 @@ export const RecentChats = ({ chats = [] }) => {
         {chats.map((chat) => (
           <button
             key={chat.chat_id}
-            className="w-full flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-slate-600 rounded-xl hover:bg-slate-50 transition-colors text-left group focus:outline-none focus:ring-2 focus:ring-blue-100"
+            className="w-full flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-[var(--color-text-secondary)] rounded-xl hover:bg-[var(--color-surface-raised)] transition-colors text-left group focus:outline-none focus:ring-2 focus:ring-teal-100 dark:focus:ring-teal-900/50"
             onClick={() => navigate(`/chat/${chat.chat_id}`)}
           >
             <MessageSquare
               size={16}
-              className="text-slate-400 group-hover:text-blue-500 shrink-0 transition-colors"
+              className="text-[var(--color-text-muted)] group-hover:text-teal-500 dark:group-hover:text-teal-400 shrink-0 transition-colors"
             />
             <span className="truncate">{chat.title}</span>
           </button>
@@ -34,7 +34,7 @@ export const RecentChats = ({ chats = [] }) => {
 
         {/* Empty State Fallback */}
         {chats.length === 0 && (
-          <div className="px-3 py-4 text-sm text-slate-400 italic">
+          <div className="px-3 py-4 text-sm text-[var(--color-text-muted)] italic">
             No recent chats
           </div>
         )}

@@ -1,5 +1,10 @@
 import { SyncLoader } from "react-spinners";
-export const Loading = ({ fullScreen , size}) => {
+import { useTheme } from "../context/ThemeContext.jsx";
+
+export const Loading = ({ fullScreen, size }) => {
+  const { theme } = useTheme();
+  const spinnerColor = theme === "dark" ? "#2dd4bf" : "#0d9488";
+
   return (
     <div
       className={
@@ -8,7 +13,7 @@ export const Loading = ({ fullScreen , size}) => {
           : "flex items-center justify-center"
       }
     >
-      <SyncLoader color="#0f4ed4" size={size} />
+      <SyncLoader color={spinnerColor} size={size} />
     </div>
   );
 };

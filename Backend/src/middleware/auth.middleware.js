@@ -13,7 +13,7 @@ export const authMiddleware = async (req, res, next) => {
         .status(401)
         .json({ message: "token is blacklisted, please login again" });
     }
-    const decode = jwt.decode(token, process.env.JWT_SECRATE_KEY);
+    const decode = jwt.verify(token, process.env.JWT_SECRATE_KEY);
     // console.log(decode);
     req.user = decode;
     next();

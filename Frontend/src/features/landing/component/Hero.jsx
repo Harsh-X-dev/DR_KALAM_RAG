@@ -22,7 +22,7 @@ export const Hero = () => {
           {/* Left Content Area */}
           <div className="flex flex-col items-start">
             {/* Badge */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#eff4ff] text-[#1a56db] text-sm font-semibold mb-6">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-teal-50 text-teal-600 text-sm font-semibold mb-6">
               <Sparkles className="w-4 h-4" />
               Your AI Companion for Knowledge & Inspiration
             </div>
@@ -30,7 +30,7 @@ export const Hero = () => {
             {/* Main Heading */}
             <h1 className="text-[3.5rem] leading-[1.1] font-bold text-[#0f172a] mb-6 tracking-tight">
               Ask. Learn. <br />
-              <span className="text-[#1a56db]">Be Inspired.</span>
+              <span className="text-[var(--color-accent)]">Be Inspired.</span>
             </h1>
 
             {/* Description */}
@@ -43,7 +43,7 @@ export const Hero = () => {
             {/* Buttons */}
             <div className="flex flex-wrap items-center gap-4">
               <button
-                className="flex items-center gap-2 bg-[#0f4ed4] hover:bg-[#1a56db] text-white px-6 py-3.5 rounded-xl font-medium transition-colors shadow-sm"
+                className="flex items-center gap-2 bg-teal-700 hover:bg-teal-600 text-white px-6 py-3.5 rounded-xl font-medium transition-colors shadow-sm"
                 onClick={() => navigate("/login")}
               >
                 Start Chatting Now
@@ -53,7 +53,7 @@ export const Hero = () => {
           </div>
 
           {/* Right Image Placeholder Area */}
-          <div className="relative w-full h-[500px] bg-blue-50/50 rounded-2xl flex items-center justify-center">
+          <div className="relative w-full h-[500px] bg-teal-50/50 rounded-2xl flex items-center justify-center">
             <img
               src={hero}
               alt="Hero Image"
@@ -76,11 +76,11 @@ export const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
             {/* Feature 1 */}
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#eff4ff] text-[#1a56db] flex items-center justify-center">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center">
                 <CheckCircle className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-[#0f172a] text-sm mb-1">
+                <h3 className="font-bold text-[var(--color-text-primary)] text-sm mb-1">
                   Accurate Answers
                 </h3>
                 <p className="text-xs text-[#64748b] leading-relaxed">
@@ -91,11 +91,11 @@ export const Hero = () => {
 
             {/* Feature 2 */}
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#eff4ff] text-[#1a56db] flex items-center justify-center">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center">
                 <Lightbulb className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-[#0f172a] text-sm mb-1">
+                <h3 className="font-bold text-[var(--color-text-primary)] text-sm mb-1">
                   Inspired by Wisdom
                 </h3>
                 <p className="text-xs text-[#64748b] leading-relaxed">
@@ -106,11 +106,11 @@ export const Hero = () => {
 
             {/* Feature 3 */}
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#eff4ff] text-[#1a56db] flex items-center justify-center">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center">
                 <ClipboardCheck className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-[#0f172a] text-sm mb-1">
+                <h3 className="font-bold text-[var(--color-text-primary)] text-sm mb-1">
                   Trusted Sources
                 </h3>
                 <p className="text-xs text-[#64748b] leading-relaxed">
@@ -121,11 +121,11 @@ export const Hero = () => {
 
             {/* Feature 4 */}
             <div className="flex gap-4">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#eff4ff] text-[#1a56db] flex items-center justify-center">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-50 text-teal-600 flex items-center justify-center">
                 <MessageCircle className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-[#0f172a] text-sm mb-1">
+                <h3 className="font-bold text-[var(--color-text-primary)] text-sm mb-1">
                   Always With You
                 </h3>
                 <p className="text-xs text-[#64748b] leading-relaxed">

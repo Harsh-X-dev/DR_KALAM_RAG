@@ -31,7 +31,7 @@ export const ChatInput = ({ chatId }) => {
   };
 
   return (
-    <div className="p-6 bg-[#f8fafc]">
+    <div className="p-6 bg-[var(--color-surface-raised)]">
       {/* Changed to a form to natively support "Enter" key submission */}
       <form
         onSubmit={handleSubmit}
@@ -43,12 +43,12 @@ export const ChatInput = ({ chatId }) => {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Ask anything about Dr. A. P. J. Abdul Kalam..."
           aria-label="Chat input"
-          className="w-full bg-white border border-gray-200 text-[#0f172a] px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#1a56db]/20 focus:border-[#1a56db] shadow-[0_2px_12px_rgba(0,0,0,0.04)] pr-16 text-[15px]"
+          className="w-full bg-[var(--color-input-bg)] border border-[var(--color-input-border)] text-[var(--color-text-primary)] px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[var(--color-input-ring)] focus:border-[var(--color-accent)] shadow-[0_2px_12px_rgba(0,0,0,0.04)] pr-16 text-[15px] placeholder:text-[var(--color-text-muted)] transition-colors"
         />
         <button
           type="submit"
           aria-label="Send message"
-          className="absolute right-3 w-10 h-10 bg-[#1a56db] text-white rounded-full flex items-center justify-center hover:bg-[#0f4ed4] transition-colors shadow-sm"
+          className="absolute right-3 w-10 h-10 bg-[var(--color-accent)] text-white rounded-full flex items-center justify-center hover:bg-[var(--color-accent-hover)] transition-colors shadow-sm"
         >
           {/* Replaced bulky inline SVG with Lucide React icon */}
           <Send className="w-4 h-4 ml-0.1" strokeWidth={2.5} />
@@ -56,7 +56,7 @@ export const ChatInput = ({ chatId }) => {
       </form>
 
       <div className="text-center mt-3">
-        <p className="text-[11px] text-[#94a3b8]">
+        <p className="text-[11px] text-[var(--color-text-muted)]">
           {/* Fixed "Cha" typo to "Chat" */}
           DR KALAM RAG Chat can make mistakes. Please verify important
           information.

@@ -18,10 +18,39 @@ model users{
   email String @unique
   isAdmin Boolean @default(false)
   password String 
+  created_at DateTime @default(now())
+
+  chat chats[]
 }
 
 model blacklist{
   id String @id @default(uuid())
   token String @unique
   createdAt DateTime @default(now())
+}
+
+model chats{
+  chat_id String @id
+  user_id  String
+  title String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  user users @relation(fields: [user_id], references: [user_id])
+  messages messages[]
+
+  @@index([user_id])
+
+}
+model messages{
+message_id Int @id @default(autoincrement())
+chat_id String
+user_message String
+assistant_message String
+sources String[]
+created_at DateTime @default(now())
+
+chat chats @relation(fields: [chat_id], references: [chat_id])
+
+@@index([chat_id])
 }

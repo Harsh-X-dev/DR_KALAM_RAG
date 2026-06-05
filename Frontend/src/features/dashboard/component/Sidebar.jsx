@@ -18,11 +18,11 @@ export const Sidebar = () => {
     fetchChats();
   }, [message]);
   return (
-    <div className="w-[280px] bg-white border-r border-gray-200 flex flex-col h-full shrink-0 z-20 shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
+    <div className="w-[280px] bg-[var(--color-surface)] border-r border-[var(--color-border)] flex flex-col h-full shrink-0 z-20 shadow-[4px_0_24px_rgba(0,0,0,0.04)] transition-colors duration-200">
       <AppName />
       <SidebarNav />
       <div className="px-6">
-        <div className="h-px bg-slate-100 w-full"></div>
+        <div className="h-px bg-[var(--color-border-subtle)] w-full"></div>
       </div>
       <RecentChats chats={userRecentChats} />
 

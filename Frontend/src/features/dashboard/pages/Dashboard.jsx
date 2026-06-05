@@ -7,7 +7,7 @@ import { Sidebar } from "../component/Sidebar.jsx";
 
 export const Dashboard = () => {
   return (
-    <div className="flex h-screen w-full bg-[#f8fafc] font-sans overflow-hidden text-[#0f172a]">
+    <div className="flex h-screen w-full bg-[var(--color-surface-raised)] font-sans overflow-hidden text-[var(--color-text-primary)] transition-colors duration-200">
       <Sidebar />
       <div className="flex-1 flex flex-col min-w-0 relative">
         <Header />
