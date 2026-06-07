@@ -28,7 +28,7 @@ export const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-[3.5rem] leading-[1.1] font-bold text-[#0f172a] mb-6 tracking-tight">
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl leading-[1.1] font-bold text-[#0f172a] mb-6 tracking-tight">
               Ask. Learn. <br />
               <span className="text-[var(--color-accent)]">Be Inspired.</span>
             </h1>
@@ -53,7 +53,7 @@ export const Hero = () => {
           </div>
 
           {/* Right Image Placeholder Area */}
-          <div className="relative w-full h-[500px] bg-teal-50/50 rounded-2xl flex items-center justify-center">
+          <div className="relative w-full h-56 sm:h-80 lg:h-[500px] bg-teal-50/50 rounded-2xl flex items-center justify-center">
             <img
               src={hero}
               alt="Hero Image"

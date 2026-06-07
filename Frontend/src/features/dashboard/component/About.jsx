@@ -20,10 +20,10 @@ import about from "../../../assets/about.png";
 export const About = () => {
   return (
     <div className="w-full h-full overflow-y-auto bg-[var(--color-surface-raised)]">
-      <div className="p-6 md:p-8 font-sans text-[var(--color-text-primary)]">
+      <div className="p-4 sm:p-6 md:p-8 font-sans text-[var(--color-text-primary)]">
         {/* Hero Section */}
         <div
-          className="border border-[var(--color-border-subtle)] rounded-2xl p-8 mb-10 flex flex-col-reverse lg:flex-row items-center gap-8 relative overflow-hidden"
+          className="border border-[var(--color-border-subtle)] rounded-2xl p-5 sm:p-8 mb-10 flex flex-col-reverse lg:flex-row items-center gap-8 relative overflow-hidden"
           style={{
             backgroundImage: `url(${about})`,
             backgroundSize: "100% 100%",
@@ -33,7 +33,7 @@ export const About = () => {
         >
           {/* Dark mode overlay so text stays readable over the background image */}
           <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/75 rounded-2xl pointer-events-none" />
-          <div className="w-full lg:w-3/10 z-10">
+          <div className="w-full lg:w-1/3 z-10">
             <h1 className="text-3xl font-bold text-[var(--color-text-primary)] mb-4">
               About Dr. A. P. J. Abdul Kalam
             </h1>
@@ -108,79 +108,39 @@ export const About = () => {
               <h2 className="text-xl font-bold text-[var(--color-text-primary)] mb-8">
                 Life Journey
               </h2>
-              <div className="relative">
-                {/* Timeline Line */}
-                <div className="absolute top-5 left-8 right-8 h-[2px] bg-teal-100 dark:bg-teal-900/30 z-0"></div>
+              {/* Mobile: vertical timeline | Desktop lg+: horizontal timeline */}
+              <div className="flex flex-col gap-6 lg:gap-0 lg:flex-row lg:justify-between relative">
+                {/* Horizontal connector line — desktop only */}
+                <div className="hidden lg:block absolute top-5 left-8 right-8 h-[2px] bg-teal-100 dark:bg-teal-900/30 z-0" />
 
-                <div className="flex justify-between gap-4">
-                  {/* 1931 */}
-                  <div className="flex flex-col items-center text-center w-1/5 z-10">
-                    <div className="w-10 h-10 rounded-full bg-teal-50 dark:bg-teal-900/30 border-2 border-[var(--color-surface)] shadow-sm flex items-center justify-center text-teal-600 dark:text-teal-400 mb-4">
-                      <Home size={18} />
+                {[
+                  { year: "1931", icon: <Home size={18} />, colorClass: "bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400", text: "Born on 15 October 1931 in Rameswaram, Tamil Nadu." },
+                  { year: "1954", icon: <GraduationCap size={18} />, colorClass: "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400", text: "Graduated in Physics from St. Joseph's College, Tiruchirappalli." },
+                  { year: "1960s–1990s", icon: <Rocket size={18} />, colorClass: "bg-orange-50 dark:bg-orange-900/30 text-orange-500 dark:text-orange-400", text: "Key role in ISRO and DRDO projects including SLV-III and Agni missiles." },
+                  { year: "2002", icon: <Landmark size={18} />, colorClass: "bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400", text: "Elected as the 11th President of India." },
+                  { year: "2015", icon: <Heart size={18} />, colorClass: "bg-pink-50 dark:bg-pink-900/30 text-pink-500 dark:text-pink-400", text: "Left for his heavenly abode on 27 July 2015 while inspiring students." },
+                ].map((item) => (
+                  <div
+                    key={item.year}
+                    className="flex items-start gap-4 lg:flex-col lg:items-center lg:text-center lg:w-1/5 z-10"
+                  >
+                    {/* Vertical connector line — mobile only */}
+                    <div className="flex flex-col items-center lg:contents">
+                      <div className={`w-10 h-10 rounded-full border-2 border-[var(--color-surface)] shadow-sm flex items-center justify-center shrink-0 mb-0 lg:mb-4 ${item.colorClass}`}>
+                        {item.icon}
+                      </div>
+                      <div className="lg:hidden w-px flex-1 bg-teal-100 dark:bg-teal-900/30 mt-1 min-h-[24px]" />
                     </div>
-                    <h4 className="text-sm font-bold text-teal-600 dark:text-teal-400 mb-2">
-                      1931
-                    </h4>
-                    <p className="text-xs text-[var(--color-text-secondary)] leading-tight">
-                      Born on 15 October 1931 in Rameswaram, Tamil Nadu.
-                    </p>
-                  </div>
-
-                  {/* 1954 */}
-                  <div className="flex flex-col items-center text-center w-1/5 z-10">
-                    <div className="w-10 h-10 rounded-full bg-emerald-50 dark:bg-emerald-900/30 border-2 border-[var(--color-surface)] shadow-sm flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4">
-                      <GraduationCap size={18} />
+                    <div>
+                      <h4 className="text-sm font-bold text-teal-600 dark:text-teal-400 mb-1 lg:mb-2">
+                        {item.year}
+                      </h4>
+                      <p className="text-xs text-[var(--color-text-secondary)] leading-tight">
+                        {item.text}
+                      </p>
                     </div>
-                    <h4 className="text-sm font-bold text-teal-600 dark:text-teal-400 mb-2">
-                      1954
-                    </h4>
-                    <p className="text-xs text-[var(--color-text-secondary)] leading-tight">
-                      Graduated in Physics from St. Joseph's College,
-                      Tiruchirappalli.
-                    </p>
                   </div>
-
-                  {/* 1960s-1990s */}
-                  <div className="flex flex-col items-center text-center w-1/5 z-10">
-                    <div className="w-10 h-10 rounded-full bg-orange-50 dark:bg-orange-900/30 border-2 border-[var(--color-surface)] shadow-sm flex items-center justify-center text-orange-500 dark:text-orange-400 mb-4">
-                      <Rocket size={18} />
-                    </div>
-                    <h4 className="text-sm font-bold text-teal-600 dark:text-teal-400 mb-2">
-                      1960s–1990s
-                    </h4>
-                    <p className="text-xs text-[var(--color-text-secondary)] leading-tight">
-                      Played a key role in ISRO and DRDO projects including
-                      SLV-III and Agni missiles.
-                    </p>
-                  </div>
-
-                  {/* 2002 */}
-                  <div className="flex flex-col items-center text-center w-1/5 z-10">
-                    <div className="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-900/30 border-2 border-[var(--color-surface)] shadow-sm flex items-center justify-center text-purple-600 dark:text-purple-400 mb-4">
-                      <Landmark size={18} />
-                    </div>
-                    <h4 className="text-sm font-bold text-teal-600 dark:text-teal-400 mb-2">
-                      2002
-                    </h4>
-                    <p className="text-xs text-[var(--color-text-secondary)] leading-tight">
-                      Elected as the 11th President of India.
-                    </p>
-                  </div>
-
-                  {/* 2015 */}
-                  <div className="flex flex-col items-center text-center w-1/5 z-10">
-                    <div className="w-10 h-10 rounded-full bg-pink-50 dark:bg-pink-900/30 border-2 border-[var(--color-surface)] shadow-sm flex items-center justify-center text-pink-500 dark:text-pink-400 mb-4">
-                      <Heart size={18} />
-                    </div>
-                    <h4 className="text-sm font-bold text-teal-600 dark:text-teal-400 mb-2">
-                      2015
-                    </h4>
-                    <p className="text-xs text-[var(--color-text-secondary)] leading-tight">
-                      Left for his heavenly abode on 27 July 2015 while
-                      inspiring students.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </section>
 

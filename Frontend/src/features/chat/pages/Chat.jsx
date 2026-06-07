@@ -16,7 +16,7 @@ if(chatLoading){
   return <Loading fullScreen={true} size={15} />;
 }
   return (
-    <div className="w-full p-8 bg-[var(--color-surface-raised)]">
+    <div className="w-full p-4 sm:p-8 bg-[var(--color-surface-raised)]">
       {message.map((msg) => {
         return (
           <div key={msg.message_id} className="max-w-4xl mx-auto pb-6">

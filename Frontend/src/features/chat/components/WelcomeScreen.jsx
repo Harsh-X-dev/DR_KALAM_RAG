@@ -4,7 +4,7 @@ import { Lightbulb, Rocket, BookOpen, Quote } from "lucide-react"; // Using Luci
 export const WelcomeScreen = () => {
   return (
     <>
-        <div className="flex-1 flex flex-col items-center justify-center p-8 max-w-3xl mx-auto w-full">
+        <div className="flex-1 flex flex-col items-center justify-center p-4 sm:p-8 max-w-3xl mx-auto w-full">
           {/* Greeting */}
           <div className="text-center mb-10">
             <div className="w-16 h-16 bg-[var(--color-accent-subtle)] rounded-full flex items-center justify-center mx-auto mb-5 shadow-sm">

@@ -2,7 +2,7 @@ import KnowledgeBaseCard from "../component/KnowledgeBaseCard";
 
 export const KnowledgeBase = () => {
   return (
-    <div className="px-10 py-10 overflow-y-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-[var(--color-surface-raised)] min-h-full text-[var(--color-text-primary)]">
+    <div className="px-4 sm:px-6 lg:px-10 py-6 lg:py-10 overflow-y-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-[var(--color-surface-raised)] min-h-full text-[var(--color-text-primary)]">
       <KnowledgeBaseCard
         title="Wings of Fire (Autobiography)"
         type="Book"

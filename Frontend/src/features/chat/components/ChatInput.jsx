@@ -31,7 +31,7 @@ export const ChatInput = ({ chatId }) => {
   };
 
   return (
-    <div className="p-6 bg-[var(--color-surface-raised)]">
+    <div className="bg-[var(--color-surface-raised)]">
       {/* Changed to a form to natively support "Enter" key submission */}
       <form
         onSubmit={handleSubmit}

@@ -9,7 +9,7 @@ export const Loading = ({ fullScreen, size }) => {
     <div
       className={
         fullScreen
-          ? "flex h-screen w-full items-center justify-center"
+          ? "flex h-dvh w-full items-center justify-center"
           : "flex items-center justify-center"
       }
     >
@@ -17,3 +17,4 @@ export const Loading = ({ fullScreen, size }) => {
     </div>
   );
 };
+

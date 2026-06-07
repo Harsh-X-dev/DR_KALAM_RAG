@@ -4,8 +4,8 @@ export const Landing = () => {
   return (
     <div className="min-h-screen flex flex-col relative">
       <Navbar />
-      {/* Added pt-20 here to push content down below the fixed Navbar */}
-      <main className="flex-grow pt-20">
+      {/* pt-[72px] offsets the fixed Navbar main bar height (py-4 + logo ~40px) */}
+      <main className="flex-grow pt-[72px]">
         <Hero />
         <Feature />
       </main>
@@ -13,5 +13,6 @@ export const Landing = () => {
     </div>
   );
 };
+
 
 

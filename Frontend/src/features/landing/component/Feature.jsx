@@ -71,15 +71,15 @@ export const Feature = () => {
         </div>
 
         {/* Quote Banner Section */}
-        <div className="max-w-5xl mx-auto bg-teal-50/60 rounded-2xl p-8 md:p-10 relative flex items-start gap-4">
+        <div className="max-w-5xl mx-auto bg-teal-50/60 rounded-2xl p-5 md:p-8 lg:p-10 relative flex items-start gap-4">
           {/* Stylized Quote Mark */}
-          <span className="text-5xl font-serif font-bold text-teal-600/30 select-none leading-none mt-1">
-            “
+          <span className="text-5xl font-serif font-bold text-teal-600/30 select-none leading-none mt-1 shrink-0">
+            "
           </span>
           
           {/* Quote Text & Author */}
-          <div className="flex-1 flex flex-col items-center text-center pr-6">
-            <p className="text-teal-900 dark:text-teal-100 font-semibold text-lg md:text-xl leading-relaxed max-w-3xl mb-4">
+          <div className="flex-1 flex flex-col items-center text-center">
+            <p className="text-teal-900 dark:text-teal-100 font-semibold text-base md:text-xl leading-relaxed max-w-3xl mb-4">
               Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.
             </p>
             <span className="text-xs font-medium text-[#475569] tracking-wide">

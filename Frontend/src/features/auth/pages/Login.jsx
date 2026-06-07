@@ -27,12 +27,12 @@ export const Login = () => {
         This puts the Login Form on top on mobile, and the Text on bottom. 
         'lg:flex-row' ensures it stays side-by-side on desktop.
       */}
-      <div className="w-full max-w-6xl flex flex-col-reverse lg:flex-row gap-16 lg:gap-8 px-6 z-10">
+      <div className="w-full max-w-6xl flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 px-6 z-10">
         {/* LEFT COLUMN: Text Content (Appears at bottom on mobile, left on desktop) */}
         <div className="flex-1 flex flex-col justify-center text-white text-center lg:text-left">
           {/* Quote Section */}
           <div className="mb-10 lg:mb-16">
-            <span className="text-5xl font-serif font-bold text-white/40 leading-none">
+            <span className="text-3xl sm:text-5xl font-serif font-bold text-white/40 leading-none">
               “
             </span>
             <h2 className="text-2xl sm:text-3xl font-medium leading-snug mt-2 mb-4">

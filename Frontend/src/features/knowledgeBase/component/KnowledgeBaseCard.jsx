@@ -42,7 +42,7 @@ export default function KnowledgeBaseCard({
   };
 
   return (
-    <div className="flex flex-col p-6 border border-[var(--color-border-subtle)] rounded-2xl bg-[var(--color-surface-card)] shadow-sm hover:shadow-md transition-all duration-200 h-full w-full max-w-sm">
+    <div className="flex flex-col p-6 border border-[var(--color-border-subtle)] rounded-2xl bg-[var(--color-surface-card)] shadow-sm hover:shadow-md transition-all duration-200 h-full w-full">
       
       {/* Top Section: Icon, Title, and Badge */}
       <div className="flex gap-4 mb-5">
