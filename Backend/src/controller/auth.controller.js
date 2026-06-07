@@ -1,7 +1,7 @@
 import db from "../config/prisma.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-
+const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
 const genrateToken = (user_id) => {
   return jwt.sign({ user_id }, process.env.JWT_SECRATE_KEY, {
     expiresIn: process.env.EXPIRES_IN,
@@ -37,8 +37,14 @@ export const loginController = async (req, res) => {
 
     // if email and password match then create a token and send to the client
     const token = genrateToken(user.user_id);
+    
+res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+  maxAge: SEVEN_DAYS,
+});
 
-    res.cookie("token", token);
     res.status(200).json({
       message: "Login successful",
       user: {
@@ -98,7 +104,13 @@ export const registerController = async (req, res) => {
 
     const token = genrateToken(user.user_id);
 
-    res.cookie("token", token);
+    res.cookie("token", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+  maxAge: SEVEN_DAYS,
+});
+
     res.status(201).json({
       message: "User created successfully.",
       user: userWithoutPassword,
