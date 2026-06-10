@@ -19,5 +19,11 @@ import chatRouter from "./routes/chat.router.js";
 
 app.use("/api/auth", authRouter);
 app.use("/api/chat", chatRouter);
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    message: "Server is running",
+  });
+});
 
 export default app;
